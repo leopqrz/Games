@@ -26,7 +26,7 @@ files = sorted( # Load the image's paths
     map(os.path.basename, glob("img/none/*.png")), 
     key=lambda s: s[-5]+s[-7]
     )
-paths = ["none", "x", "o"]  # The images are split into paths
+paths = ["none", "x", "o"]  # The images are splitted into paths
 values = [list(map(lambda s: "img/"+paths[i]+"/"+s, files)) for i in range(3)]  # Join all images into one list (0-none, 1-x, 2-o)
 
 if 'values' not in st.session_state:
@@ -38,7 +38,7 @@ clicked = utils.display_game(st.session_state['values'], player1, player2)
 if clicked in range(9):
     s = st.session_state['values'][clicked]
     mark = s.split("/")[1]  # none | x | o
-    
+
     idx = paths.index(mark)
     if idx == 2:
         idx = -1

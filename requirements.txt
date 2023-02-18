@@ -1,0 +1,4 @@
+IPython==8.8.0
+watchdog==2.2.1
+pre-commit==2.21.0
+streamlit==1.16.0
